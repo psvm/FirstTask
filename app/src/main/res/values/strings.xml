@@ -2,4 +2,5 @@
     <string name="app_name">FirstTask</string>
     <string name="enterText">Type some text</string>
     <string name="enterButton">Enter</string>
+    <string name="input_error">Ошибка данных</string>
 </resources>

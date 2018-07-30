@@ -6,18 +6,18 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <EditText
-        android:id="@+id/eText"
+    <TextView
+        android:id="@+id/secondText"
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enterText"
+        android:textSize="18dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"/>
     <Button
-        android:id="@+id/buttonEnter"
-        android:text="@string/enterButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:id="@+id/secondButtonEnter"
+            android:text="@string/enterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+    </LinearLayout>

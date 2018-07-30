@@ -1,14 +1,13 @@
 package com.example.firsttask;
 
-import android.support.annotation.StringRes;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
 
 public class stActivity extends AppCompatActivity {
     private EditText mText;
@@ -18,18 +17,19 @@ public class stActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (isTextValid()) {
-                showMessage(mText.getText());
-            }
-        }
+                Intent secondScreenIntent = new Intent(stActivity.this, secondActivity.class);
+                secondScreenIntent.putExtra("data", mText.getText().toString());
+                startActivity(secondScreenIntent);
 
+            }
+
+        }
 
     };
-        private boolean isTextValid() {
+    private boolean isTextValid() {
             return !TextUtils.isEmpty(mText.getText());
         }
-    private void showMessage(Editable text){
-        Toast.makeText(this, text, Toast.LENGTH_LONG).show();
-    }
+
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
